@@ -52,6 +52,7 @@ def get_content():
             heading = c.split('/')[0].capitalize()
             if heading not in headings:
                 output += '\n### {}\n\n'.format(heading)
+                headings.append(heading)
             output += '- [{}]({})'.format(title, c)
         output += '\n'
         return output
