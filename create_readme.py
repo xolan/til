@@ -32,7 +32,7 @@ SEP = '\n---\n'
 
 def get_content():
     def categories_list_md(globbed):
-        categories = [c.split('/')[0] for c in globbed]
+        categories = list(set([c.split('/')[0] for c in globbed]))
         output = ''
         for c in categories:
             output += '* [{}](#{})\n'.format(c.capitalize(), c)
@@ -53,7 +53,7 @@ def get_content():
             if heading not in headings:
                 output += '\n### {}\n\n'.format(heading)
                 headings.append(heading)
-            output += '- [{}]({})'.format(title, c)
+            output += '- [{}]({})\n'.format(title, c)
         output += '\n'
         return output
 
