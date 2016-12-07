@@ -54,7 +54,7 @@ def get_content():
         categories_list=categories_list,
         categories_listing=categories_listing
     )
-    return (output, categories_list, categories_listing)
+    return (output, categories_list, categories_listing, globbed)
 
 
 def main(*args):
@@ -65,7 +65,7 @@ def main(*args):
         '{content}'
         '{sep}'
         '{footer}'
-    ).format(header=HEADER.format(til_count=len(content[2])), footer=FOOTER, sep=SEP, content=content[0])
+    ).format(header=HEADER.format(til_count=len(content[3])), footer=FOOTER, sep=SEP, content=content[0])
 
     with open('README.md', 'w+') as readme:
         readme.write(output)
