@@ -3,32 +3,13 @@
 import glob
 
 
-HEADER = '''
-# TIL
-
-> Today I Learned
-
-A collection of concise write-ups on small things I learn day to day across a
-variety of languages and technologies. These are things that don't really
-warrant a full blog post.
-'''
-
-FOOTER = '''
-## About
-
-I shamelessly stole this idea from
-[jbranchaud/til](https://github.com/jbranchaud/til).
-
-## License
-
-&copy; 2016 Jonas Svarvaa
-
-This repository is licensed under the MIT license. See `LICENSE` for
-details.
-'''
-
+HEADER = ''
+with open('template_header.md', 'r') as f:
+    HEADER = f.read()
+FOOTER = ''
+with open('template_footer.md', 'r') as f:
+    FOOTER = f.read()
 SEP = '\n---\n'
-
 
 def get_content():
     def categories_list_md(globbed):
@@ -60,6 +41,9 @@ def get_content():
     content_glob = '**/*.md'
     globbed = glob.glob(content_glob)
 
+    categories_list = categories_list_md(globbed)
+    categories_listing = categories_listing_md(globbed)
+
     output = (
         '\n### Categories\n\n'
         '{categories_list}'
@@ -67,20 +51,21 @@ def get_content():
         '{categories_listing}'
     ).format(
         sep=SEP,
-        categories_list=categories_list_md(globbed),
-        categories_listing=categories_listing_md(globbed)
+        categories_list=categories_list,
+        categories_listing=categories_listing
     )
-    return output
+    return (output, categories_list, categories_listing)
 
 
 def main(*args):
+    content = get_content()
     output = (
         '{header}'
         '{sep}'
         '{content}'
         '{sep}'
         '{footer}'
-    ).format(header=HEADER, footer=FOOTER, sep=SEP, content=get_content())
+    ).format(header=HEADER.format(til_count=len(content[2])), footer=FOOTER, sep=SEP, content=content[0])
 
     with open('README.md', 'w+') as readme:
         readme.write(output)
