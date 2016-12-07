@@ -11,14 +11,23 @@ warrant a full blog post.
 
 ### Categories
 
+* [Bash](#bash)
 * [Python](#python)
 
 ---
 
+### Bash
+
+- [bash/check_executable_existence.md](bash/check_executable_existence.md)
+- [bash/check_file_existence.md](bash/check_file_existence.md)
+- [bash/simple_coloring_of_strings.md](bash/simple_coloring_of_strings.md)
+- [bash/read_interactive_user_input.md](bash/read_interactive_user_input.md)
+- [bash/check_os.md](bash/check_os.md)
+
 ### Python
 
-- [Formatting strings with kwargs](python/formatting_strings_with_kwargs.md)
 - [Get exception context](python/get_exception_context.md)
+- [Formatting strings with kwargs](python/formatting_strings_with_kwargs.md)
 
 
 ---
