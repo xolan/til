@@ -32,7 +32,7 @@ SEP = '\n---\n'
 
 def get_content():
     def categories_list_md(globbed):
-        categories = list(set([c.split('/')[0] for c in globbed]))
+        categories = sorted(list(set([c.split('/')[0] for c in globbed])))
         output = ''
         for c in categories:
             output += '* [{}](#{})\n'.format(c.capitalize(), c)
@@ -41,7 +41,7 @@ def get_content():
     def categories_listing_md(globbed):
         output = ''
         headings = []
-        for c in globbed:
+        for c in sorted(globbed):
             title = c
             with open(c, 'r') as entry:
                 content = entry.read()

@@ -11,8 +11,8 @@ warrant a full blog post.
 
 ### Categories
 
-* [Python](#python)
 * [Bash](#bash)
+* [Python](#python)
 
 ---
 
@@ -20,14 +20,14 @@ warrant a full blog post.
 
 - [Check Executable Existence](bash/check_executable_existence.md)
 - [Check File Existence](bash/check_file_existence.md)
-- [Simple Coloring of Strings](bash/simple_coloring_of_strings.md)
-- [Interactively Read User Input](bash/read_interactive_user_input.md)
 - [Check OS](bash/check_os.md)
+- [Interactively Read User Input](bash/read_interactive_user_input.md)
+- [Simple Coloring of Strings](bash/simple_coloring_of_strings.md)
 
 ### Python
 
-- [Get exception context](python/get_exception_context.md)
 - [Formatting strings with kwargs](python/formatting_strings_with_kwargs.md)
+- [Get exception context](python/get_exception_context.md)
 
 
 ---
