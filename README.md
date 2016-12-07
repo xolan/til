@@ -11,18 +11,18 @@ warrant a full blog post.
 
 ### Categories
 
-* [Bash](#bash)
 * [Python](#python)
+* [Bash](#bash)
 
 ---
 
 ### Bash
 
-- [bash/check_executable_existence.md](bash/check_executable_existence.md)
-- [bash/check_file_existence.md](bash/check_file_existence.md)
-- [bash/simple_coloring_of_strings.md](bash/simple_coloring_of_strings.md)
-- [bash/read_interactive_user_input.md](bash/read_interactive_user_input.md)
-- [bash/check_os.md](bash/check_os.md)
+- [Check Executable Existence](bash/check_executable_existence.md)
+- [Check File Existence](bash/check_file_existence.md)
+- [Simple Coloring of Strings](bash/simple_coloring_of_strings.md)
+- [Interactively Read User Input](bash/read_interactive_user_input.md)
+- [Check OS](bash/check_os.md)
 
 ### Python
 

@@ -1,3 +1,5 @@
+# Simple Coloring of Strings
+
 ```bash
 _C_RESET="\e[0m"
 _C_RED="\e[31m"

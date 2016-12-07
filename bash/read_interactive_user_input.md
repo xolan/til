@@ -1,3 +1,5 @@
+# Interactively Read User Input
+
 ```bash
 read -p "Would you something something? " -n 1 -r
 echo # (optional) move to a new line
