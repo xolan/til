@@ -4,7 +4,7 @@
 from contextlib import contextmanager
 
 @contextmanager
-def with_context():
+def error_context():
     try:
         yield
     except Exception as e:
@@ -20,7 +20,7 @@ def with_context():
 a = 'herp'
 b = 'derp'
 
-with with_context():
+with error_context():
     c = a + b
     d = a / b
 
@@ -60,6 +60,6 @@ __main__.TypeError: Context: {'__builtins__': <module 'builtins' (built-in)>,
  'b': 'derp',
  'c': 'herpderp',
  'contextmanager': <function contextmanager at 0x7f4ae1339ae8>,
- 'with_context': <function with_context at 0x7f4ae1339ea0>}
+ 'error_context': <function error_context at 0x7f4ae1339ea0>}
 
 ```
