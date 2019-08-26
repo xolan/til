@@ -6,7 +6,7 @@ A collection of concise write-ups on small things I learn day to day across a
 variety of languages and technologies. These are things that don't really
 warrant a full blog post.
 
-_7 TILs and counting..._
+_8 TILs and counting..._
 
 ---
 
@@ -24,6 +24,7 @@ _7 TILs and counting..._
 - [Check OS](bash/check_os.md)
 - [Interactively Read User Input](bash/read_interactive_user_input.md)
 - [Simple Coloring of Strings](bash/simple_coloring_of_strings.md)
+- [TodoTXT Plugin: Sync GDrive](bash/todoxtx_plugin_sync_gdrive.md)
 
 ### Python
 
